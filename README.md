@@ -1,4 +1,5 @@
 ✈️ Airlines Tickets Price Prediction (Regression)
+
 📌 Project Overview
 This project is a Machine Learning Regression Model that predicts airline ticket prices based on multiple factors such as:
 
@@ -8,6 +9,7 @@ Total stops
 Duration
 Additional features
 The goal of this project is to provide an accurate and efficient system for predicting ticket prices, which can be useful for travelers, travel agencies, and airlines.
+
 
 🛠️ Tech Stack
 Python
