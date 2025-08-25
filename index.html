@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MLProject</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+<body>
+  <h1>Machine learning <br><b>Air Flight tickets in India</b></h1>
+  <div>
+
+    <form action="{{url_for('predict')}}" method="post">
+          <input type="text"  name="Flight" placeholder="Flight Code" required="required"><br>
+          <input class="list" list="airlines" name="Airline" placeholder="Name of the Airline" required><br>
+                <datalist id="airlines">
+                      <option value="Vistara">
+                      <option value="Air_india">
+                      <option value="Indigo">
+                      <option value="Go_first">
+                      <option value="Airasia">
+                      <option value="Spicejet">
+                </datalist>
+          <input class="list" list="SourceCitys" name="SourceCity" placeholder="From where the Flight starts" required> <br>
+                <datalist id="SourceCitys">
+                      <option value="Delhi">
+                      <option value="Mumbai">
+                      <option value="Bangalore">
+                      <option value="Kolkata">
+                      <option value="Hyderabad">
+                      <option value="Chennai">
+                </datalist>
+          <input class="list" list="Stop" name="Stops" placeholder="No. of stops from start to end of a flight" required><br>
+                <datalist id="Stop">
+                      <option value="zero">
+                      <option value="one">
+                      <option value="two_or_more">
+                </datalist>
+          <input class="list" list="ArrivalTimes" name="ArrivalTime" placeholder="Arrival Time of the flight at the destination city" required><br>
+                <datalist id="ArrivalTimes">
+                      <option value="Early_Morning">
+                      <option value="Morning">
+                      <option value="Afternoon">
+                        <option value="Evening">
+                      <option value="Night">
+                      <option value="Late_Night">
+                </datalist>
+          <input class="list" list="DestinationCitys" name="DestinationCity" placeholder="Where the flight ends" required><br>
+              <datalist id="DestinationCitys">
+                      <option value="Delhi">
+                      <option value="Mumbai">
+                      <option value="Bangalore">
+                      <option value="Kolkata">
+                      <option value="Hyderabad">
+                      <option value="Chennai">
+              </datalist>
+             <input class="list" list="Classes" name="Class" placeholder="Economy or Business" required><br>
+                <datalist id="Classes">
+                      <option value="Economy">
+                      <option value="Business">
+                </datalist>  
+          <input type="number"  name="Duration" placeholder="Duration of the flight in Hrs." min="0" step="0.01" required><br>
+          <input type="number"  name="DaysLeft" placeholder="how many day left" min="0" required><br>
+          <button type="submit"> Run</button>
+        </form>
+        <br>
+      <span>{{ predict_text }}</span>  
+  </div>
+  <ul>
+    <li > <a href="us">contact with us</a>  </li>
+  </ul>  
+
+  
+</body>
+
+
+
+</html>
